@@ -1,0 +1,12 @@
+flink:
+  host: 10.1.12.51
+  port: 8081
+  jarflies:
+    - file: D:\Document\Workspaces\Git\TestFlink\target\flink-learning-common-1.0.0.jar
+    - file: D:\Document\Workspaces\Git\TestFlink\target\flink-learning-component-1.0.0.jar
+
+job:
+  name: HelloWorld
+  packagename: com.cqx.flink.component
+
+param:

@@ -1,31 +1,30 @@
-package com.cqx.examples.test;
+package com.cqx.flink.component;
 
+import com.cqx.flink.common.StreamExecutionInf;
+import org.apache.flink.api.common.JobExecutionResult;
 import org.apache.flink.api.common.functions.FlatMapFunction;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.functions.sink.SinkFunction;
 import org.apache.flink.util.Collector;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
-//import org.slf4j.Logger;
-//import org.slf4j.LoggerFactory;
+import java.util.Map;
 
 /**
- * arrive scene
+ * HelloWorld
  *
  * @author chenqixu
  */
-public class ArriveStreamJob {
+public class HelloWorld implements StreamExecutionInf {
 
-    private static final Logger logger = LogManager.getLogger(ArriveStreamJob.class);
+    @Override
+    public void init(Map params) throws Exception {
 
-    public static void main(String[] args) throws Exception {
-        final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
-//        final StreamExecutionEnvironment env = StreamExecutionEnvironment.createRemoteEnvironment(
-//                "10.1.12.51", 8081,
-//                "D:\\Document\\Workspaces\\Git\\TestFlink\\target\\flink-learning-examples-1.0.0.jar");
+    }
+
+    @Override
+    public JobExecutionResult exec(StreamExecutionEnvironment env) throws Exception {
         //创建DataSource
         String[] words = {"apple", "orange", "banana", "watermelon"};
         DataStreamSource<String> ds = env.fromElements(words);
@@ -44,11 +43,10 @@ public class ArriveStreamJob {
         flatMap.addSink(new SinkFunction<String>() {
             @Override
             public void invoke(String value) throws Exception {
-                logger.info(value);
                 System.out.println(value);
             }
         });
         //运行
-        env.execute("ArriveStreamJob");
+        return env.execute("HelloWorld");
     }
 }

@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.Serializable;
 import java.net.URL;
 import java.net.URLConnection;
 
@@ -15,9 +16,9 @@ import java.net.URLConnection;
  *
  * @author chenqixu
  */
-public class SchemaUtil {
+public class SchemaUtil implements Serializable {
 
-    private static Logger logger = LoggerFactory.getLogger(SchemaUtil.class);
+    private static final Logger logger = LoggerFactory.getLogger(SchemaUtil.class);
     private String urlStr;
 
     public SchemaUtil(String urlStr) {

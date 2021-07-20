@@ -8,17 +8,17 @@ import org.apache.avro.specific.SpecificDatumWriter;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.Serializable;
 
 /**
  * RecordConvertor
  *
  * @author chenqixu
  */
-public class RecordConvertor {
+public class RecordConvertor implements Serializable {
 
-    final private DatumReader<GenericRecord> reader;
-    final private DatumWriter<GenericRecord> writer;
-
+    private final DatumReader<GenericRecord> reader;
+    private final DatumWriter<GenericRecord> writer;
 
     /**
      * @param schema
