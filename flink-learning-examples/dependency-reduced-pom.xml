@@ -118,7 +118,7 @@
     <dependency>
       <groupId>org.apache.flink</groupId>
       <artifactId>flink-java</artifactId>
-      <version>1.11.1</version>
+      <version>1.13.1</version>
       <scope>provided</scope>
       <exclusions>
         <exclusion>
@@ -130,14 +130,6 @@
           <groupId>org.apache.commons</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>flink-core</artifactId>
-          <groupId>org.apache.flink</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>commons-lang3</artifactId>
-          <groupId>org.apache.commons</groupId>
-        </exclusion>
-        <exclusion>
           <artifactId>commons-math3</artifactId>
           <groupId>org.apache.commons</groupId>
         </exclusion>
@@ -145,8 +137,8 @@
     </dependency>
     <dependency>
       <groupId>org.apache.flink</groupId>
-      <artifactId>flink-streaming-java_2.11</artifactId>
-      <version>1.11.1</version>
+      <artifactId>flink-streaming-java_2.12</artifactId>
+      <version>1.13.1</version>
       <scope>provided</scope>
       <exclusions>
         <exclusion>
@@ -158,23 +150,7 @@
           <groupId>org.xerial.snappy</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>scala-library</artifactId>
-          <groupId>org.scala-lang</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>scala-parser-combinators_2.11</artifactId>
-          <groupId>org.scala-lang.modules</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>flink-runtime_2.11</artifactId>
-          <groupId>org.apache.flink</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>flink-shaded-guava</artifactId>
-          <groupId>org.apache.flink</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>flink-core</artifactId>
+          <artifactId>flink-runtime_2.12</artifactId>
           <groupId>org.apache.flink</groupId>
         </exclusion>
         <exclusion>
@@ -185,8 +161,8 @@
     </dependency>
     <dependency>
       <groupId>org.apache.flink</groupId>
-      <artifactId>flink-clients_2.11</artifactId>
-      <version>1.11.1</version>
+      <artifactId>flink-clients_2.12</artifactId>
+      <version>1.13.1</version>
       <scope>provided</scope>
       <exclusions>
         <exclusion>
@@ -194,7 +170,7 @@
           <groupId>org.slf4j</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>flink-optimizer_2.11</artifactId>
+          <artifactId>flink-optimizer_2.12</artifactId>
           <groupId>org.apache.flink</groupId>
         </exclusion>
         <exclusion>
@@ -202,11 +178,7 @@
           <groupId>commons-cli</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>flink-runtime_2.11</artifactId>
-          <groupId>org.apache.flink</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>flink-core</artifactId>
+          <artifactId>flink-runtime_2.12</artifactId>
           <groupId>org.apache.flink</groupId>
         </exclusion>
       </exclusions>
@@ -214,29 +186,15 @@
     <dependency>
       <groupId>org.apache.flink</groupId>
       <artifactId>flink-table-api-java</artifactId>
-      <version>1.11.1</version>
+      <version>1.13.1</version>
       <scope>provided</scope>
-      <exclusions>
-        <exclusion>
-          <artifactId>flink-table-common</artifactId>
-          <groupId>org.apache.flink</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>slf4j-api</artifactId>
-          <groupId>org.slf4j</groupId>
-        </exclusion>
-      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.apache.flink</groupId>
-      <artifactId>flink-table-planner-blink_2.11</artifactId>
-      <version>1.11.1</version>
+      <artifactId>flink-table-planner-blink_2.12</artifactId>
+      <version>1.13.1</version>
       <scope>provided</scope>
       <exclusions>
-        <exclusion>
-          <artifactId>scala-library</artifactId>
-          <groupId>org.scala-lang</groupId>
-        </exclusion>
         <exclusion>
           <artifactId>slf4j-api</artifactId>
           <groupId>org.slf4j</groupId>
@@ -246,30 +204,40 @@
           <groupId>org.javassist</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>flink-table-api-scala_2.11</artifactId>
+          <artifactId>flink-table-api-scala_2.12</artifactId>
           <groupId>org.apache.flink</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>flink-table-api-java-bridge_2.11</artifactId>
+          <artifactId>flink-table-api-java-bridge_2.12</artifactId>
           <groupId>org.apache.flink</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>flink-table-api-scala-bridge_2.11</artifactId>
+          <artifactId>flink-table-api-scala-bridge_2.12</artifactId>
           <groupId>org.apache.flink</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>flink-table-runtime-blink_2.11</artifactId>
-          <groupId>org.apache.flink</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>reflections</artifactId>
-          <groupId>org.reflections</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>flink-table-common</artifactId>
+          <artifactId>flink-table-runtime-blink_2.12</artifactId>
           <groupId>org.apache.flink</groupId>
         </exclusion>
       </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.flink</groupId>
+      <artifactId>flink-json</artifactId>
+      <version>1.13.1</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.flink</groupId>
+      <artifactId>flink-connector-jdbc_2.12</artifactId>
+      <version>1.13.1</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.flink</groupId>
+      <artifactId>flink-csv</artifactId>
+      <version>1.13.1</version>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
