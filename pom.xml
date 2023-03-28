@@ -8,6 +8,8 @@
         <module>flink-learning-component</module>
         <module>flink-learning-agent</module>
         <module>flink-learning-function</module>
+        <module>flink-learning-formats</module>
+        <module>flink-learning-connectors</module>
     </modules>
     <groupId>com.cqx</groupId>
     <version>1.0.0</version>
