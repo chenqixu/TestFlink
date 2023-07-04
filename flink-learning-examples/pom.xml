@@ -173,12 +173,30 @@ under the License.
             <version>1.0.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.cqx</groupId>
+            <artifactId>flink-learning-function</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
         <!-- test -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.11</version>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.typesafe.sbt</groupId>
+            <artifactId>sbt-interface</artifactId>
+            <version>0.13.8</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>scala-library</artifactId>
+                    <groupId>org.scala-lang</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 </project>

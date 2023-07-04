@@ -1,6 +1,6 @@
 package com.cqx.examples.test.sql;
 
-import com.cqx.examples.test.function.ConvFunction;
+import com.cqx.function.ConvFunction;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.table.api.EnvironmentSettings;
 import org.apache.flink.table.api.Table;
